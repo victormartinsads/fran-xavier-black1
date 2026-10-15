@@ -132,10 +132,11 @@
     .pain-layout{gap:32px}
     .pain-cards{gap:20px}
     .pain-card{padding:26px 22px}
-    .quote-band{min-height:245px;padding-block:58px;position:relative;isolation:isolate}
-    .quote-band:before{content:"";position:absolute;z-index:-1;right:max(-35px,calc((100vw - 1250px)/2));top:50%;width:250px;height:250px;transform:translateY(-50%);background:url('./assets/imperio-planner-cover.png') center 48%/cover no-repeat;opacity:.14;filter:grayscale(.8);mask-image:radial-gradient(ellipse,#000 24%,transparent 72%);pointer-events:none}
-    .quote-band>*{position:relative;z-index:1}
-    .quote-text{max-width:900px}
+    .journey-close{position:relative;isolation:isolate;overflow:hidden;display:grid;gap:6px;width:min(100%,820px);min-height:unset;margin:26px auto 0;padding:18px clamp(20px,3vw,32px);border:1px solid rgba(219,183,126,.3);border-radius:14px;background:linear-gradient(115deg,#493629,#302319 78%);text-align:center}
+    .journey-close:before{content:"";position:absolute;z-index:-1;left:10px;top:-28px;width:118px;height:118px;background:url('./assets/imperio-planner-cover.png') left 76%/cover no-repeat;opacity:.13;filter:grayscale(.7);mask-image:radial-gradient(ellipse,#000 18%,transparent 72%);pointer-events:none}
+    .journey-close .quote-text{position:relative;z-index:1;max-width:700px;margin:0 auto;color:#fffaf2;font-size:clamp(1.05rem,1.45vw,1.22rem);line-height:1.35}
+    .journey-close .quote-explainer{position:relative;z-index:1;max-width:620px;margin:0 auto;padding:7px 0 0;border:0;border-top:1px solid rgba(219,183,126,.48);color:#eadcc8;font-size:.72rem;line-height:1.45;text-align:center}
+    .journey-close .quote-text:before,.journey-close .quote-text:after{color:#dfb86f;font-size:1.7rem}
     .experience{padding:82px 0 90px}
     .pillar-grid{margin-top:38px;gap:18px}
     .pillar-card{padding:25px 21px}
@@ -144,7 +145,7 @@
     .proof-heading h2{font-size:clamp(2.1rem,3.5vw,3rem)}
     .testimonial-card{height:340px}
     .offer-section{padding:72px 0;position:relative;isolation:isolate;overflow:hidden}
-    .offer-section:after{content:"";position:absolute;z-index:-1;right:max(-85px,calc((100vw - 1300px)/2));top:50%;width:280px;height:280px;transform:translateY(-50%);background:url('./assets/imperio-planner-cover.png') center 50%/cover no-repeat;opacity:.09;mask-image:radial-gradient(ellipse,#000 20%,transparent 72%);pointer-events:none}
+    .offer-section:after{content:"";position:absolute;z-index:-1;left:max(-86px,calc((100vw - 1260px)/2));top:20px;width:190px;height:238px;transform:none;background:url('./assets/imperio-planner-cover.png') left 70%/cover no-repeat;opacity:.075;mask-image:radial-gradient(ellipse,#000 20%,transparent 72%);pointer-events:none}
     .offer-includes{padding:23px 27px}
     .bio-section{grid-template-columns:minmax(320px,.9fr) minmax(0,1.1fr);gap:clamp(36px,6vw,86px);align-items:center;min-height:unset;padding:74px max(32px,calc((100vw - 1120px)/2));background:linear-gradient(115deg,#f0e3d1,#f8f2e8 62%,#efe1ce)}
     .bio-image{position:relative;width:100%;min-height:560px;margin:0;border:1px solid rgba(164,119,63,.55);border-radius:230px 230px 26px 26px;background-position:center 37%;box-shadow:0 0 0 10px rgba(189,143,80,.11),0 24px 54px rgba(61,42,26,.12)}
@@ -173,11 +174,13 @@
       .pain-lead h2,.section-heading h2,.proof-heading h2,.offer-title h2,.faq-heading h2,.bio-copy h2,.closing h2{font-size:clamp(1.72rem,7.5vw,2.05rem);line-height:1.16}
       .section-light#jornada{padding-block:52px}
       .pain-layout{gap:24px}.pain-cards{gap:11px}.pain-card{padding:16px 15px}
-      .quote-band{min-height:unset;padding:36px 22px}
-      .quote-band:before{right:-120px;width:210px;height:210px;opacity:.1}
+      .journey-close{margin-top:24px;padding:19px 16px;border-radius:12px}
+      .journey-close:before{left:-22px;top:auto;bottom:-34px;width:88px;height:88px;opacity:.11}
+      .journey-close .quote-text{max-width:290px;font-size:1rem;line-height:1.35}
+      .journey-close .quote-explainer{max-width:280px;font-size:.69rem}
       .experience{padding:56px 0 60px}.pillar-grid{margin-top:27px;gap:11px}.pillar-card{padding:17px 14px}
       .proof-section{padding:54px 0 58px}.proof-layout{gap:24px}.testimonial-card{height:auto}
-      .offer-section{padding:50px 0}.offer-section:after{right:-130px;width:220px;height:220px;opacity:.07}.offer-includes{padding:16px 18px}
+      .offer-section{padding:50px 0}.offer-section:after{left:-105px;top:auto;bottom:10px;width:130px;height:170px;opacity:.06}.offer-includes{padding:16px 18px}
       .bio-section{grid-template-columns:1fr;gap:30px;padding:48px 23px 54px}
       .bio-image{width:min(100%,390px);min-height:460px;margin:0 auto;border-radius:190px 190px 22px 22px;background-position:center 36%}
       .bio-image:before{inset:10px;border-radius:180px 180px 15px 15px}
@@ -211,9 +214,12 @@
         <article class="pain-card"><span class="round-icon" aria-hidden="true">♧</span><h3>Medo de cobrar e vender</h3><p>Você hesita em mostrar seu valor e convidar para comprar.</p></article>
         <article class="pain-card"><span class="round-icon" aria-hidden="true">◎</span><h3>Crescer sozinha</h3><p>Falta uma rede que entenda seus desafios.</p></article>
       </div>
-    </div></section>
-
-    <section class="quote-band" aria-label="Uma mensagem para sua jornada"><div class="quote-spacer" aria-hidden="true"></div><blockquote class="quote-text">Você não precisa de mais uma técnica. Precisa de direção para fazer seu trabalho prosperar.</blockquote><p class="quote-explainer">Desenvolvimento pessoal, visão sistêmica e estratégia para o seu próximo passo.</p></section>
+    </div>
+      <div class="journey-close" aria-label="Uma mensagem para sua jornada">
+        <blockquote class="quote-text">Você não precisa de mais uma técnica. Precisa de direção para fazer seu trabalho prosperar.</blockquote>
+        <p class="quote-explainer">Desenvolvimento pessoal, visão sistêmica e estratégia para o seu próximo passo.</p>
+      </div>
+    </section>
 
     <section class="experience" id="experiencia"><div class="wrap">
       <div class="section-heading"><p class="eyebrow">O que é o Império de Águias</p><h2>Cresça com direção, confiança e apoio.</h2><p>Uma jornada anual para terapeutas que querem prosperar com autenticidade.</p></div>
