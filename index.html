@@ -117,8 +117,8 @@
         <div class="lead-field"><label for="lead-name">Seu nome</label><input id="lead-name" name="name" type="text" autocomplete="name" placeholder="Como podemos chamar você?" minlength="2" required></div>
         <div class="lead-field"><label for="lead-email">Seu e-mail</label><input id="lead-email" name="email" type="email" autocomplete="email" placeholder="voce@exemplo.com" required></div>
         <div class="lead-field"><label for="lead-phone">Seu WhatsApp</label><input id="lead-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="(00) 00000-0000" pattern="[0-9()+.\s-]{10,20}" title="Informe um número de telefone válido." required></div>
-        <label class="lead-consent"><input name="consent" type="checkbox" required><span>Concordo em guardar meus dados neste navegador e incluí-los na mensagem do WhatsApp sobre a Black Terapêutica.</span></label>
-        <p class="lead-share-note">Seus dados ficam salvos neste dispositivo e vão no texto pré-preenchido. Para a equipe recebê-los, revise e toque em Enviar.</p>
+        <label class="lead-consent"><input name="consent" type="checkbox" required><span>Autorizo o envio dos meus dados à equipe Fran Xavier pelo WhatsApp para contato sobre a Black Terapêutica.</span></label>
+        <p class="lead-share-note">O WhatsApp abrirá com seus dados preenchidos. Revise a mensagem e toque em Enviar para compartilhar com a equipe.</p>
         <button class="btn lead-submit" type="submit">Continuar para o WhatsApp <span aria-hidden="true">↗</span></button>
       </form>
     </div>
@@ -132,7 +132,7 @@
       const nameField=document.getElementById('lead-name');
       document.addEventListener('click',event=>{
         const trigger=event.target.closest('[data-open-lead]');
-        if(trigger){event.preventDefault();if(!modal.open){modal.showModal();try{const saved=JSON.parse(localStorage.getItem('fran-black-terapeutica-lead')||'null');if(saved){document.getElementById('lead-name').value=saved.name||'';document.getElementById('lead-email').value=saved.email||'';document.getElementById('lead-phone').value=saved.phone||''}}catch(error){}requestAnimationFrame(()=>nameField.focus())}return}
+        if(trigger){event.preventDefault();if(!modal.open){modal.showModal();requestAnimationFrame(()=>nameField.focus())}return}
         if(event.target.closest('[data-close-modal]'))modal.close();
       });
       modal.addEventListener('click',event=>{if(event.target===modal)modal.close()});
@@ -143,7 +143,6 @@
         const name=String(data.get('name')).trim();
         const email=String(data.get('email')).trim();
         const phone=String(data.get('phone')).trim();
-        try{localStorage.setItem('fran-black-terapeutica-lead',JSON.stringify({name,email,phone,savedAt:new Date().toISOString(),source:'black-terapeutica'}))}catch(error){console.warn('Não foi possível salvar o cadastro neste navegador.',error)}
         const message=['Olá, Fran! Vim pela página da campanha Black Terapêutica.','','Meus dados para contato:','Nome: '+name,'E-mail: '+email,'WhatsApp: '+phone,'','Quero saber mais sobre a mentoria.'].join('\n');
         window.location.href='https://wa.me/5554991471234?text='+encodeURIComponent(message);
       });

@@ -11,4 +11,4 @@ Landing page estática da campanha Black Terapêutica, pronta para publicação 
 
 O ponto de entrada é `index.html`; imagens locais ficam em `assets/`. As fontes Instrument Sans e Instrument Serif são carregadas do Google Fonts.
 
-O formulário abre um WhatsApp com nome, e-mail e telefone preenchidos; os dados também ficam salvos no navegador do visitante para facilitar novo contato. Eles só chegam à equipe depois que a pessoa confirma o envio no WhatsApp. A página não envia leads para um banco de dados ou CRM.
+O formulário abre o WhatsApp com nome, e-mail e telefone preenchidos. Os dados não ficam armazenados no navegador nem são enviados a um banco ou CRM. A equipe só os recebe depois que a pessoa confirma o envio da mensagem.
