@@ -125,6 +125,61 @@
     @media(max-width:600px){.proof-section{padding:42px 0 46px}.proof-layout{gap:18px}.proof-heading h2{font-size:1.9rem}.proof-heading p{font-size:.77rem}.testimonial-window{overflow:hidden;mask-image:linear-gradient(90deg,transparent,#000 3%,#000 97%,transparent)}.testimonial-track{width:max-content;gap:10px;animation:slide 52s linear infinite}.testimonial-card{width:calc(100vw - 44px);height:auto;min-height:0;padding:6px;scroll-snap-align:none}.testimonial-card img{width:100%;height:auto;max-height:62svh;object-fit:contain}.testimonial-card:nth-child(n+5){display:grid}}
     @media(prefers-reduced-motion:reduce){.testimonial-track{animation:none}.testimonial-window{overflow-x:auto;scroll-snap-type:x mandatory}.testimonial-card{scroll-snap-align:center}}
   </style>
+  <style>
+    /* Mais respiro entre as dobras e presença recorrente da águia */
+    html,body{overflow-x:clip}
+    .section-light#jornada{padding-block:78px}
+    .pain-layout{gap:32px}
+    .pain-cards{gap:20px}
+    .pain-card{padding:26px 22px}
+    .quote-band{min-height:245px;padding-block:58px;position:relative;isolation:isolate}
+    .quote-band:before{content:"";position:absolute;z-index:-1;right:max(-35px,calc((100vw - 1250px)/2));top:50%;width:250px;height:250px;transform:translateY(-50%);background:url('./assets/imperio-planner-cover.png') center 48%/cover no-repeat;opacity:.14;filter:grayscale(.8);mask-image:radial-gradient(ellipse,#000 24%,transparent 72%);pointer-events:none}
+    .quote-band>*{position:relative;z-index:1}
+    .quote-text{max-width:900px}
+    .experience{padding:82px 0 90px}
+    .pillar-grid{margin-top:38px;gap:18px}
+    .pillar-card{padding:25px 21px}
+    .proof-section{padding:78px 0 82px}
+    .proof-layout{gap:34px}
+    .proof-heading h2{font-size:clamp(2.1rem,3.5vw,3rem)}
+    .testimonial-card{height:340px}
+    .offer-section{padding:72px 0;position:relative;isolation:isolate;overflow:hidden}
+    .offer-section:after{content:"";position:absolute;z-index:-1;right:max(-85px,calc((100vw - 1300px)/2));top:50%;width:280px;height:280px;transform:translateY(-50%);background:url('./assets/imperio-planner-cover.png') center 50%/cover no-repeat;opacity:.09;mask-image:radial-gradient(ellipse,#000 20%,transparent 72%);pointer-events:none}
+    .offer-includes{padding:23px 27px}
+    .bio-section{grid-template-columns:minmax(320px,.9fr) minmax(0,1.1fr);gap:clamp(36px,6vw,86px);align-items:center;min-height:unset;padding:74px max(32px,calc((100vw - 1120px)/2));background:linear-gradient(115deg,#f0e3d1,#f8f2e8 62%,#efe1ce)}
+    .bio-image{position:relative;width:100%;min-height:560px;margin:0;border:1px solid rgba(164,119,63,.55);border-radius:230px 230px 26px 26px;background-position:center 37%;box-shadow:0 0 0 10px rgba(189,143,80,.11),0 24px 54px rgba(61,42,26,.12)}
+    .bio-image:before{content:"";position:absolute;inset:12px;border:1px solid rgba(255,249,238,.7);border-radius:220px 220px 18px 18px;pointer-events:none}
+    .eagle-medallion{position:absolute;right:-22px;bottom:34px;width:104px;height:104px;border:4px solid #f8f1e6;border-radius:50%;background:#4b3422 url('./assets/imperio-planner-cover.png') center 51%/cover no-repeat;box-shadow:0 0 0 1px #bd8f50,0 10px 28px rgba(44,29,18,.22)}
+    .bio-copy{max-width:660px;margin:0;padding:0;text-align:left}
+    .bio-copy .eyebrow{margin-bottom:14px}
+    .bio-copy h2{max-width:580px;margin:0 0 22px;font-size:clamp(2.25rem,3.4vw,3.15rem);line-height:1.1;color:#3b291d}
+    .bio-copy p{max-width:620px;margin:0 0 16px;color:#625142;font-size:.98rem;line-height:1.75}
+    .bio-copy p:last-child{margin-bottom:0}
+    .bio-copy h2:after{content:"";display:block;width:74px;height:2px;margin-top:20px;background:linear-gradient(90deg,#bd8f50,transparent)}
+    .faq-section{padding:76px 0}
+    .faq-layout{gap:30px}
+    .faq-item summary{padding-block:20px}
+    .closing{min-height:230px}
+    @media(max-width:900px){.bio-section{grid-template-columns:minmax(270px,.8fr) minmax(0,1.2fr);gap:38px;padding-inline:34px}.bio-image{min-height:480px}.bio-copy h2{font-size:2.35rem}.bio-copy p{font-size:.9rem}}
+    @media(max-width:600px){
+      .section-light#jornada{padding-block:52px}
+      .pain-layout{gap:24px}.pain-cards{gap:11px}.pain-card{padding:16px 15px}
+      .quote-band{min-height:unset;padding:36px 22px}
+      .quote-band:before{right:-120px;width:210px;height:210px;opacity:.1}
+      .experience{padding:56px 0 60px}.pillar-grid{margin-top:27px;gap:11px}.pillar-card{padding:17px 14px}
+      .proof-section{padding:54px 0 58px}.proof-layout{gap:24px}.testimonial-card{height:auto}
+      .offer-section{padding:50px 0}.offer-section:after{right:-130px;width:220px;height:220px;opacity:.07}.offer-includes{padding:16px 18px}
+      .bio-section{grid-template-columns:1fr;gap:30px;padding:48px 23px 54px}
+      .bio-image{width:min(100%,390px);min-height:460px;margin:0 auto;border-radius:190px 190px 22px 22px;background-position:center 36%}
+      .bio-image:before{inset:10px;border-radius:180px 180px 15px 15px}
+      .eagle-medallion{right:0;bottom:25px;width:86px;height:86px}
+      .bio-copy{max-width:560px;margin-inline:auto;text-align:center}
+      .bio-copy .eyebrow{margin-bottom:10px}.bio-copy h2{margin:0 auto 17px;font-size:2.2rem}
+      .bio-copy h2:after{margin:16px auto 0}.bio-copy p{margin:0 auto 14px;font-size:.88rem;line-height:1.7}
+      .faq-section{padding:54px 0}.faq-item summary{padding-block:16px}
+      .closing{min-height:205px}
+    }
+  </style>
 </head>
 <body>
   <a href="#conteudo" class="skip">Pular para o conteúdo</a>
@@ -178,7 +233,7 @@
       <div class="investment"><p class="eyebrow">Investimento</p><p class="investment-price">R$ 2.500</p><p class="investment-note">À vista ou em até 12x no cartão</p><a class="button" href="https://wa.me/5554991471234?text=Ol%C3%A1%20Fran!%20Vim%20pela%20p%C3%A1gina%20do%20Imp%C3%A9rio%20de%20%C3%81guias%202027%20e%20quero%20conversar%20sobre%20minha%20inscri%C3%A7%C3%A3o.">Quero conversar sobre minha inscrição <span aria-hidden="true">→</span></a><small class="investment-date">▣ &nbsp;A abertura oficial acontece em 01 de dezembro.</small></div>
     </div></section>
 
-    <section class="bio-section" id="sobre"><div class="bio-image" role="img" aria-label="Fran Xavier, terapeuta sistêmica e mentora"></div><div class="bio-copy"><p class="eyebrow">Quem vai caminhar com você</p><h2>Sou Francielly Xavier Arnez.</h2><p>Há mais de seis anos, dedico minha vida a fortalecer mulheres para que vivam, com prosperidade e autenticidade, do propósito que escolheram servir.</p><p>Sou terapeuta sistêmica, mentora de terapeutas e fundadora da Escola Órion de Terapias. Através do Império de Águias, compartilho minha experiência para ajudar mulheres a crescer com prosperidade e autenticidade, unindo desenvolvimento pessoal, profissional e uma visão sistêmica da vida e dos negócios.</p></div></section>
+    <section class="bio-section" id="sobre"><div class="bio-image" role="img" aria-label="Fran Xavier, terapeuta sistêmica e mentora"><span class="eagle-medallion" aria-hidden="true"></span></div><div class="bio-copy"><p class="eyebrow">Quem vai caminhar com você</p><h2>Sou Francielly Xavier Arnez.</h2><p>Há mais de seis anos, dedico minha vida a fortalecer mulheres para que vivam, com prosperidade e autenticidade, do propósito que escolheram servir.</p><p>Sou terapeuta sistêmica, mentora de terapeutas e fundadora da Escola Órion de Terapias. Através do Império de Águias, compartilho minha experiência para ajudar mulheres a crescer com prosperidade e autenticidade, unindo desenvolvimento pessoal, profissional e uma visão sistêmica da vida e dos negócios.</p></div></section>
 
     <section class="faq-section" id="duvidas"><div class="wrap faq-layout"><div class="faq-heading"><p class="eyebrow">Dúvidas frequentes</p><h2>O que você quer saber antes de entrar?</h2><p>Tire aqui as principais dúvidas sobre o Império de Águias 2027.</p></div><div class="faq">
       <details class="faq-item"><summary>Para quem é o Império de Águias?</summary><div class="faq-answer">Para mulheres terapeutas que querem fortalecer sua mentalidade, desenvolver seu trabalho e caminhar com mais direção e apoio.</div></details>
