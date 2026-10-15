@@ -128,8 +128,7 @@
   <style>
     /* Mais respiro entre as dobras e presença recorrente da águia */
     html,body{overflow-x:clip}
-    .section-light#jornada{position:relative;z-index:2;padding-block:78px}
-    .section-light#jornada:after{content:"";position:absolute;right:clamp(22px,8vw,112px);bottom:-34px;width:150px;height:108px;background:url('./assets/eagle-watermark.svg') center/contain no-repeat;opacity:.34;pointer-events:none;transform:rotate(-5deg)}
+    .section-light#jornada{padding-block:78px}
     .pain-layout{gap:32px}
     .pain-cards{gap:20px}
     .pain-card{padding:26px 22px}
@@ -170,7 +169,6 @@
       .hero-cta .button{min-height:46px}
       .pain-lead h2,.section-heading h2,.proof-heading h2,.offer-title h2,.faq-heading h2,.bio-copy h2,.closing h2{font-size:clamp(1.72rem,7.5vw,2.05rem);line-height:1.16}
       .section-light#jornada{padding-block:52px}
-      .section-light#jornada:after{right:18px;bottom:-22px;width:98px;height:70px;opacity:.3}
       .pain-layout{gap:24px}.pain-cards{gap:11px}.pain-card{padding:16px 15px}
       .experience{padding:56px 0 60px}.pillar-grid{grid-template-columns:1fr;gap:20px;margin-top:30px;position:relative}.pillar-grid:before{display:block;left:23px;right:auto;top:24px;bottom:24px;height:auto;border-top:0;border-left:1px solid rgba(113,82,49,.38)}.pillar-card{display:grid;grid-template-columns:48px minmax(0,1fr);column-gap:14px;align-items:start;padding:0}.pillar-marker{grid-column:1;grid-row:1 / span 3;margin:0}.pillar-stage{grid-column:2;margin:1px 0 6px}.pillar-card h3{grid-column:2;margin-bottom:4px;font-size:.96rem}.pillar-card p{grid-column:2;max-width:unset;font-size:.75rem}
       .proof-section{padding:54px 0 58px}.proof-layout{gap:24px}.testimonial-card{height:auto}
@@ -183,6 +181,38 @@
       .bio-copy h2:after{margin:16px auto 0}.bio-copy p{margin:0 auto 14px;font-size:.88rem;line-height:1.7}
       .faq-section{padding:54px 0}.faq-item summary{padding-block:16px}
       .closing{min-height:205px}
+    }
+    /* Acabamentos desta revisão */
+    .pain-card .round-icon{width:52px;height:52px;margin-bottom:14px;border:1px solid rgba(124,85,42,.24);background:linear-gradient(145deg,#f0dfc2,#d9b77f);color:#624521;font-size:1.35rem;box-shadow:0 5px 14px rgba(94,65,34,.1)}
+    .proof-section{position:relative;background-image:radial-gradient(circle at 1px 1px,rgba(230,202,163,.075) 1px,transparent 1.5px),linear-gradient(135deg,#493528 0%,#302219 70%,#241912 100%);background-size:28px 28px,cover}
+    .testimonial-card{border-color:rgba(224,190,139,.42);box-shadow:0 12px 28px rgba(18,12,8,.18)}
+    .offer-section:before{content:"";position:absolute;z-index:0;left:-46px;top:50%;width:min(45vw,610px);height:112%;transform:translateY(-50%);background:url('./assets/eagle-watermark.svg') left center/100% auto no-repeat;opacity:.14;pointer-events:none;mask-image:linear-gradient(90deg,#000 0%,#000 60%,transparent 100%)}
+    .offer-section>.wrap{position:relative;z-index:1}
+    .offer-includes{border-color:rgba(164,119,63,.28);box-shadow:0 12px 30px rgba(83,57,31,.055)}
+    .investment-price{color:#704b28;text-shadow:0 1px 0 rgba(255,255,255,.55)}
+    .investment .eyebrow{color:#9a713f}
+    .closing{min-height:300px;border-block:1px solid rgba(210,171,112,.5);background:radial-gradient(ellipse at 73% 115%,rgba(195,151,90,.3),transparent 48%),linear-gradient(90deg,rgba(28,20,14,.82),rgba(28,20,14,.96) 36%,rgba(28,20,14,.93)),url('./assets/francielly.webp') left 46%/auto 265% no-repeat,#1c140e}
+    .closing-copy{max-width:700px;padding:24px 32px}
+    .closing-copy:before{content:"IMPÉRIO DE ÁGUIAS · 2027";display:block;margin-bottom:9px;color:#e1bd83;font-size:.68rem;font-weight:700;letter-spacing:.22em}
+    .closing h2{margin:0;color:#fff7eb;font:500 clamp(2rem,3.5vw,3rem)/1.12 var(--serif)}
+    .closing-copy p{margin:10px 0 20px;color:#e2d4c2;font-size:.94rem}
+    .closing .button{min-width:250px;border:1px solid rgba(255,242,218,.45);box-shadow:0 8px 24px rgba(187,135,66,.18)}
+    .footer{background:linear-gradient(110deg,#21170f,#17110c);border-top-color:rgba(221,181,119,.4)}
+    .footer-brand{color:#e4c18b}
+    .footer-brand span{color:#f5e9d9}
+    @media(max-width:900px){.offer-section:before{left:-90px;width:48vw;opacity:.09}}
+    @media(max-width:600px){
+      .pain-card .round-icon{width:46px;height:46px;margin-bottom:10px;font-size:1.2rem}
+      .proof-section{background-size:24px 24px,cover}
+      .offer-section:before{left:-92px;top:80px;width:230px;height:240px;transform:none;background-position:left top;background-size:100% auto;opacity:.075;mask-image:linear-gradient(90deg,#000 0%,transparent 100%)}
+      .closing{min-height:260px;background-position:center,center,24% 48%;background-size:auto,auto,auto 210%}
+      .closing-copy{padding:28px 8px}
+      .closing-copy:before{font-size:.6rem;letter-spacing:.18em}
+      .closing .button{width:min(100%,360px);min-width:0}
+      .footer{padding:21px 0 28px}
+      .footer-inner{align-items:center;text-align:center}
+      .footer-links{flex-wrap:wrap;justify-content:center;gap:8px 18px}
+      .copyright{margin:0;text-align:center}
     }
   </style>
 </head>
