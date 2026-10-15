@@ -76,6 +76,26 @@
     @media(max-width:900px){.testimonial-card{width:min(72vw,510px);height:300px}}
     @media(max-width:600px){.testimonial-window{overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none}.testimonial-window::-webkit-scrollbar{display:none}.testimonial-track{animation:none;width:max-content;gap:10px}.testimonial-card{width:calc(100vw - 44px);height:auto;min-height:0;padding:6px;scroll-snap-align:center}.testimonial-card img{width:100%;height:auto;max-height:62svh;object-fit:contain}.testimonial-card:nth-child(n+5){display:none}}
   </style>
+  <style>
+    /* Arte oficial do Império e composição central da oferta */
+    .experience{isolation:isolate}
+    .experience:after{display:block;right:max(-95px,calc((100vw - 1380px)/2));top:50%;width:330px;height:330px;transform:translateY(-50%);border:0;border-radius:0;box-shadow:none;background:url('./assets/imperio-planner-cover.png') center 46%/cover no-repeat;opacity:.16;mask-image:radial-gradient(ellipse,#000 26%,transparent 72%);z-index:0}
+    .offer-layout{grid-template-columns:minmax(0,760px);justify-content:center;justify-items:center;gap:18px;text-align:center}
+    .offer-title{width:100%;max-width:680px;text-align:center}
+    .offer-title h2{max-width:unset}
+    .offer-title p{max-width:590px;margin:12px auto 0}
+    .offer-includes{width:min(100%,640px);padding:18px 24px;text-align:left}
+    .offer-includes li{align-items:center;margin:10px 0;line-height:1.45}
+    .investment{width:100%;max-width:640px;margin:0 auto;padding-top:17px;border-top:1px solid rgba(127,91,52,.16);text-align:center}
+    .investment .eyebrow{margin-bottom:7px}
+    .investment-price{font-size:clamp(3.2rem,6vw,4.25rem)}
+    .investment-note{margin:5px 0 16px}
+    .investment .button,.button,.button-outline{justify-content:center;text-align:center}
+    .investment .button{width:min(100%,440px);min-height:50px;margin-inline:auto;gap:10px}
+    .investment-date{max-width:100%;text-align:center;line-height:1.5}
+    @media(max-width:600px){.offer-section{padding:36px 0}.offer-layout{gap:14px}.offer-title h2{font-size:1.9rem}.offer-includes{padding:13px 16px}.offer-includes li{margin:8px 0}.investment{padding-top:14px}.investment-price{font-size:3.1rem}.investment .button{width:100%;min-height:48px}.experience:after{right:-115px;width:260px;height:260px;opacity:.08}}
+    @media(prefers-reduced-motion:reduce){.experience:after{opacity:.08}}
+  </style>
 </head>
 <body>
   <a href="#conteudo" class="skip">Pular para o conteúdo</a>
