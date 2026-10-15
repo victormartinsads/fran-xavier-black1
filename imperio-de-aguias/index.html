@@ -95,6 +95,26 @@
     .investment-date{max-width:100%;text-align:center;line-height:1.5}
     @media(max-width:600px){.offer-section{padding:36px 0}.offer-layout{gap:14px}.offer-title h2{font-size:1.9rem}.offer-includes{padding:13px 16px}.offer-includes li{margin:8px 0}.investment{padding-top:14px}.investment-price{font-size:3.1rem}.investment .button{width:100%;min-height:48px}.experience:after{right:-115px;width:260px;height:260px;opacity:.08}}
     @media(prefers-reduced-motion:reduce){.experience:after{opacity:.08}}
+    /* Depoimentos centralizados, carrossel contínuo e paleta mais presente */
+    .proof-section{padding:62px 0 66px;background:var(--cream2);color:var(--text)}
+    .proof-layout{display:grid;grid-template-columns:minmax(0,850px);justify-content:center;gap:27px;text-align:center}
+    .proof-heading .eyebrow{color:#987143}
+    .proof-heading h2{max-width:760px;margin-inline:auto;color:#3b291d}
+    .proof-heading p{max-width:620px;margin:12px auto 0;color:#74604f}
+    .proof-actions{display:none}
+    .testimonial-dots{display:none}
+    .testimonial-window{width:100%;overflow:hidden;mask-image:linear-gradient(90deg,transparent,#000 4%,#000 96%,transparent)}
+    .testimonial-track{width:max-content;animation:slide 52s linear infinite;align-items:center}
+    .testimonial-track:hover{animation-play-state:paused}
+    .testimonial-card{border:1px solid rgba(161,117,62,.28);background:#fffdf9;box-shadow:0 8px 26px rgba(79,55,32,.08)}
+    .testimonial-card img{background:#fffdf9}
+    .pain-card,.pillar-card,.offer-includes{border-color:rgba(164,119,63,.2);background:#fffdf9}
+    .round-icon,.offer-includes li:before{background:#e7cfaa;color:#684923}
+    .offer-section{background:#f5ecdf}
+    .button{background:linear-gradient(115deg,#e6c994,#c89b5e)}
+    @media(max-width:900px){.proof-layout{grid-template-columns:minmax(0,850px);gap:22px}}
+    @media(max-width:600px){.proof-section{padding:42px 0 46px}.proof-layout{gap:18px}.proof-heading h2{font-size:1.9rem}.proof-heading p{font-size:.77rem}.testimonial-window{overflow:hidden;mask-image:linear-gradient(90deg,transparent,#000 3%,#000 97%,transparent)}.testimonial-track{width:max-content;gap:10px;animation:slide 52s linear infinite}.testimonial-card{width:calc(100vw - 44px);height:auto;min-height:0;padding:6px;scroll-snap-align:none}.testimonial-card img{width:100%;height:auto;max-height:62svh;object-fit:contain}.testimonial-card:nth-child(n+5){display:grid}}
+    @media(prefers-reduced-motion:reduce){.testimonial-track{animation:none}.testimonial-window{overflow-x:auto;scroll-snap-type:x mandatory}.testimonial-card{scroll-snap-align:center}}
   </style>
 </head>
 <body>
@@ -133,7 +153,7 @@
     </div></section>
 
     <section class="proof-section" id="relatos"><div class="wrap proof-layout">
-      <div class="proof-heading"><p class="eyebrow">Depoimentos e registros reais da comunidade</p><h2>Uma comunidade que já começou a voar junto.</h2><p>Veja relatos das mulheres que encontraram mais direção e pertencimento no Império de Águias.</p><div class="proof-actions"><a class="button" href="https://drive.google.com/drive/folders/1epo34yLperbEDgVdxybEgEQwLzMPkeIP?usp=sharing" target="_blank" rel="noopener">Ver depoimentos <span aria-hidden="true">→</span></a><a class="button-outline" href="https://drive.google.com/drive/folders/1jVVXym7g82Acq1IJCzWJK5gYVcPODa_e?usp=sharing" target="_blank" rel="noopener">Ver fotos da comunidade</a></div></div>
+      <div class="proof-heading"><p class="eyebrow">Depoimentos e registros reais da comunidade</p><h2>Uma comunidade que já começou a voar junto.</h2><p>Veja relatos das mulheres que encontraram mais direção e pertencimento no Império de Águias.</p></div>
       <div><div class="testimonial-window" aria-label="Relatos enviados pelas participantes"><div class="testimonial-track">
         <a class="testimonial-card" href="https://drive.google.com/file/d/1X38W1w2XgzeAyK9Enqvhlq9E4dLHp6mj/view" target="_blank" rel="noopener"><img src="./assets/relato-7114.png" alt="Relato de participante do Império de Águias" loading="lazy"></a>
         <a class="testimonial-card" href="https://drive.google.com/file/d/1racLmSRveUXHIdG8BBgczybGXWKuISqo/view" target="_blank" rel="noopener"><img src="./assets/relato-7115.png" alt="Relato de participante do Império de Águias" loading="lazy"></a>
