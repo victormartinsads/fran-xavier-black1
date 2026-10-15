@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" fill="none">
+  <defs>
+    <linearGradient id="feather" x1="220" y1="210" x2="565" y2="820" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#D9B77F"/>
+      <stop offset="1" stop-color="#8E663D"/>
+    </linearGradient>
+    <linearGradient id="beak" x1="540" y1="230" x2="720" y2="355" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#E2C18A"/>
+      <stop offset="1" stop-color="#A57843"/>
+    </linearGradient>
+  </defs>
+  <g stroke="#A98150" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Feathered shoulder and chest -->
+    <path d="M421 445c-92 27-157 100-186 205-19 69-13 148 12 225 32-47 62-78 99-101 11 55 32 99 66 135 12-56 29-100 54-139 18 48 46 88 86 119-3-82-10-143-34-202 42 34 80 72 111 120 9-92-3-175-38-246-34-70-88-112-170-116Z" fill="url(#feather)" fill-opacity=".42" stroke-width="8"/>
+    <!-- Layered breast feathers -->
+    <path d="M297 581c45 12 79 34 108 68m-126-19c48 14 86 42 114 78m-121-24c39 14 71 38 99 70m-77-198c41 10 76 29 109 59m125-23c-18 37-30 73-34 110m78-77c-19 35-30 71-35 106m82-65c-20 31-31 60-38 93" stroke-width="5" opacity=".85"/>
+    <!-- Head profile: crown, cheek, and hooked beak -->
+    <path d="M217 385c7-107 62-202 151-247 74-38 166-31 225 17 31 25 51 59 58 96 36 9 80 28 119 52-32 5-62 18-84 37-12 35-39 60-77 73-17 35-46 61-85 76-42 16-89 18-132 8-48 14-94 20-141 8-25-27-39-68-34-120Z" fill="#F8F1E6" fill-opacity=".68" stroke-width="9"/>
+    <path d="M632 247c38 8 83 26 128 56-35 8-64 24-83 47-9 11-18 20-31 25 12-29 9-59-14-82Z" fill="url(#beak)" stroke-width="8"/>
+    <path d="M757 303c-15 7-31 20-43 37-11 15-27 24-49 25 16-23 23-45 20-66" stroke-width="7"/>
+    <!-- Fierce brow and eye -->
+    <path d="M493 275c31-24 70-24 99-3-20 2-37 10-50 24-17-2-33-9-49-21Z" fill="url(#feather)" stroke-width="7"/>
+    <ellipse cx="548" cy="293" rx="15" ry="12" fill="#6F5132" stroke-width="4"/>
+    <circle cx="552" cy="293" r="4" fill="#F8F1E6" stroke="none"/>
+    <!-- Facial feather lines and neck ruff -->
+    <path d="M480 326c24 14 51 20 79 17m-95 7c19 17 42 28 67 32m-53 1c15 18 33 31 54 41m-73-22c11 21 26 38 45 53m-207-72c-3 39 8 72 31 99m-15-120c5 38 21 69 48 92" stroke-width="5"/>
+    <path d="M404 426c-25 24-44 53-57 87m93-75c-21 29-34 61-41 95m82-92c-15 31-24 62-28 95" stroke-width="4" opacity=".75"/>
+  </g>
+</svg>
