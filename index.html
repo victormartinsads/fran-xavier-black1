@@ -314,6 +314,8 @@
       const modal=document.getElementById('lead-modal');
       const form=document.getElementById('lead-form');
       const nameField=document.getElementById('lead-name');
+      const conditionHeadline=document.querySelector('.condition-section .price-banner h3');
+      if(conditionHeadline)conditionHeadline.innerHTML='Conheça as duas jornadas<br><span>em uma conversa com a Fran.</span>';
       document.addEventListener('click',event=>{
         const trigger=event.target.closest('[data-open-lead]');
         if(trigger){event.preventDefault();if(!modal.open){modal.showModal();requestAnimationFrame(()=>nameField.focus())}return}
