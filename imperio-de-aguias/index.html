@@ -200,8 +200,18 @@
     .footer{background:linear-gradient(110deg,#21170f,#17110c);border-top-color:rgba(221,181,119,.4)}
     .footer-brand{color:#e4c18b}
     .footer-brand span{color:#f5e9d9}
+    /* Ajuste sutil para diminuir quebras de linha */
+    .hero h1{font-size:clamp(2.72rem,4.9vw,4.45rem);letter-spacing:-.045em}
+    .hero-description{font-size:.96rem;line-height:1.54}
+    .pain-lead h2,.section-heading h2,.proof-heading h2,.offer-title h2,.faq-heading h2,.bio-copy h2{font-size:clamp(1.82rem,2.8vw,2.52rem);letter-spacing:-.032em}
+    .closing h2{font-size:clamp(1.9rem,3.3vw,2.85rem);letter-spacing:-.03em}
+    .pain-card p,.pillar-card p,.offer-title p,.investment p{font-size:.78rem;line-height:1.45}
     @media(max-width:900px){.offer-section:before{left:-90px;width:48vw;opacity:.09}}
     @media(max-width:600px){
+      .hero h1{font-size:clamp(1.74rem,7.6vw,2.05rem);letter-spacing:-.038em}
+      .hero-description{font-size:.79rem;line-height:1.4}
+      .pain-lead h2,.section-heading h2,.proof-heading h2,.offer-title h2,.faq-heading h2,.bio-copy h2{font-size:clamp(1.66rem,7.1vw,1.96rem)}
+      .closing h2{font-size:1.74rem}
       .pain-card .round-icon{width:46px;height:46px;margin-bottom:10px;font-size:1.2rem}
       .proof-section{background-size:24px 24px,cover}
       .offer-section:before{left:-92px;top:80px;width:230px;height:240px;transform:none;background-position:left top;background-size:100% auto;opacity:.075;mask-image:linear-gradient(90deg,#000 0%,transparent 100%)}
