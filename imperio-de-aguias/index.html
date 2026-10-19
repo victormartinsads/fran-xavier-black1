@@ -268,6 +268,19 @@
       .footer-inner{align-items:center;text-align:center}
       .footer-links{flex-wrap:wrap;justify-content:center;gap:8px 18px}
       .copyright{margin:0;text-align:center}
+      /* Leitura e toque em celulares */
+      .mobile-cta{display:none!important}
+      .testimonial-window{overflow-x:auto;mask-image:none;scroll-snap-type:x mandatory;padding:0 2px}
+      .testimonial-track{gap:12px;animation:none;transform:none!important}
+      .proof-section .testimonial-card{width:calc(100vw - 72px);max-width:300px;padding:5px;scroll-snap-align:center}
+      .testimonial-card:nth-child(n+5){display:none}
+      .bio-section{gap:22px;padding:42px 20px 46px}.bio-image{min-height:360px}.bio-copy{padding:0}.bio-copy p{line-height:1.58}
+      .faq-section{padding:44px 0}.faq-item summary{padding-block:14px}
+    }
+    @media(max-width:360px){
+      .hero h1{font-size:1.53rem}.hero-description{font-size:.76rem}.hero-proof{font-size:.67rem}
+      .section-heading p,.journey-closing p{font-size:.72rem}.journey-grid{gap:6px}.journey-grid article{padding:15px 10px}.journey-grid h3{font-size:.86rem}.journey-grid p{font-size:.67rem}
+      .proof-section .testimonial-card{width:calc(100vw - 58px)}
     }
   </style>
 </head>
