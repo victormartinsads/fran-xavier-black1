@@ -11,4 +11,4 @@ Landing page estática da campanha Black Terapêutica, pronta para publicação 
 
 O ponto de entrada é `index.html`; imagens locais ficam em `assets/`. As fontes Instrument Sans e Instrument Serif são carregadas do Google Fonts.
 
-O formulário abre o WhatsApp com nome, e-mail e telefone preenchidos. Os dados não ficam armazenados no navegador nem são enviados a um banco ou CRM. A equipe só os recebe depois que a pessoa confirma o envio da mensagem.
+Os formulários das páginas Black Terapêutica e Império de Águias salvam nome, e-mail e WhatsApp na aba correspondente da planilha e, após a confirmação do salvamento, abrem o WhatsApp com a mensagem preenchida. A integração usa a variável de ambiente `SHEETS_WEBHOOK_URL` configurada na Vercel.

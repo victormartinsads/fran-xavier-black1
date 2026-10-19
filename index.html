@@ -317,8 +317,9 @@
         <div class="lead-field"><label for="lead-name">Seu nome</label><input id="lead-name" name="name" type="text" autocomplete="name" placeholder="Como podemos chamar você?" minlength="2" required></div>
         <div class="lead-field"><label for="lead-email">Seu e-mail</label><input id="lead-email" name="email" type="email" autocomplete="email" placeholder="voce@exemplo.com" required></div>
         <div class="lead-field"><label for="lead-phone">Seu WhatsApp</label><input id="lead-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="(00) 00000-0000" pattern="[0-9()+.\s-]{10,20}" title="Informe um número de telefone válido." required></div>
-        <label class="lead-consent"><input name="consent" type="checkbox" required><span>Autorizo o envio dos meus dados à equipe Fran Xavier pelo WhatsApp para contato sobre a Black Terapêutica.</span></label>
-        <p class="lead-share-note">O WhatsApp abrirá com seus dados preenchidos. Revise a mensagem e toque em Enviar para compartilhar com a equipe.</p>
+        <label class="lead-consent"><input name="consent" type="checkbox" required><span>Autorizo o uso dos meus dados pela equipe Fran Xavier para contato sobre a Black Terapêutica.</span></label>
+        <p class="lead-share-note">Seus dados serão enviados à equipe. Em seguida, você poderá enviar sua mensagem pelo WhatsApp.</p>
+        <p class="lead-share-note" id="lead-error" role="alert" hidden></p>
         <button class="btn lead-submit" type="submit">Continuar para o WhatsApp <span aria-hidden="true">↗</span></button>
       </form>
     </div>
@@ -344,6 +345,7 @@
     })();
   </script>
   <script>document.getElementById('year').textContent=new Date().getFullYear();if('IntersectionObserver'in window){const revealObserver=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('is-visible');revealObserver.unobserve(entry.target)}}),{threshold:.12});document.querySelectorAll('.section-heading,.card,.method-card,.bridge-copy,.bridge-visual,.offer-box,.founder-grid,.faq-item').forEach(el=>{el.classList.add('reveal');revealObserver.observe(el)})}</script>
+  <script src="./assets/lead-integration.js"></script>
   <script>
     (()=>{
       const modal=document.getElementById('lead-modal');
@@ -357,7 +359,7 @@
         if(event.target.closest('[data-close-modal]'))modal.close();
       });
       modal.addEventListener('click',event=>{if(event.target===modal)modal.close()});
-      form.addEventListener('submit',event=>{
+      form.addEventListener('submit',async event=>{
         event.preventDefault();
         if(!form.reportValidity())return;
         const data=new FormData(form);
@@ -365,7 +367,14 @@
         const email=String(data.get('email')).trim();
         const phone=String(data.get('phone')).trim();
         const message=['Olá, Fran! Vim pela página da campanha Black Terapêutica 2027.','','Meus dados para contato:','Nome: '+name,'E-mail: '+email,'WhatsApp: '+phone,'','Quero entender se as duas jornadas fazem sentido para mim e conhecer os detalhes da condição especial.'].join('\n');
-        window.location.href='https://wa.me/5554991471234?text='+encodeURIComponent(message);
+        const button=form.querySelector('[type="submit"]'), error=document.getElementById('lead-error');
+        button.disabled=true; error.hidden=true; button.textContent='Salvando...';
+        try {
+          await saveCampaignLead('black',name,email,phone);
+          window.location.href='https://wa.me/5554991471234?text='+encodeURIComponent(message);
+        } catch (_) {
+          error.textContent='Não foi possível salvar seus dados. Verifique sua conexão e tente novamente.'; error.hidden=false;
+        } finally { button.disabled=false; button.textContent='Continuar para o WhatsApp ↗'; }
       });
     })();
   </script>
