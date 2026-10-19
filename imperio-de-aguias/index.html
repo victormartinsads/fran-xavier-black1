@@ -200,6 +200,28 @@
     .footer{background:linear-gradient(110deg,#21170f,#17110c);border-top-color:rgba(221,181,119,.4)}
     .footer-brand{color:#e4c18b}
     .footer-brand span{color:#f5e9d9}
+    /* Dobras 4, 5 e 6: leitura mais limpa e objetiva */
+    #imperio{padding-block:58px}
+    #imperio .section-heading{max-width:760px;margin-inline:auto}
+    .imperio-pillars{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;max-width:1020px;margin:30px auto 0}
+    .imperio-pillars article{position:relative;padding:24px 22px;border:1px solid rgba(132,95,52,.16);border-radius:14px;background:rgba(255,250,243,.7);box-shadow:0 8px 22px rgba(79,55,32,.04)}
+    .imperio-pillars span,.journey-grid span{display:block;margin-bottom:13px;color:#a77b47;font-size:.68rem;font-weight:700;letter-spacing:.16em}
+    .imperio-pillars h3,.journey-grid h3{margin:0 0 8px;font:600 1.12rem/1.2 var(--serif);color:var(--text)}
+    .imperio-pillars p,.journey-grid p{margin:0;color:#68594c;font-size:.79rem;line-height:1.5}
+    .journey-section{padding-block:60px}
+    .journey-section .section-heading{max-width:720px;margin-inline:auto}
+    .journey-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;max-width:1100px;margin:28px auto 0}
+    .journey-grid article{padding:20px 18px;border-top:1px solid rgba(226,190,122,.55);background:rgba(255,255,255,.045)}
+    .journey-grid h3{color:#f7ece0;font-size:1rem}
+    .journey-grid p{color:#dbcfc1;font-size:.76rem;line-height:1.45}
+    .journey-closing{max-width:690px;margin:26px auto 0;text-align:center}
+    .journey-closing p{margin:0 0 17px;color:#eadfd2;font-size:.82rem;line-height:1.5}
+    .proof-section{padding-block:54px}
+    .proof-heading h2{max-width:460px}
+    .proof-heading>p{font-size:.8rem;line-height:1.45}
+    .proof-list{display:grid;gap:7px;margin:18px 0 20px;padding:0;list-style:none}
+    .proof-list li{display:flex;align-items:baseline;gap:8px;padding-bottom:7px;border-bottom:1px solid rgba(226,190,139,.18);font-size:.8rem}
+    .proof-list strong{color:#e6c18a}.proof-list span{color:#d7c9b9}
     /* Ajuste sutil para diminuir quebras de linha */
     .hero h1{font-size:clamp(2.72rem,4.9vw,4.45rem);letter-spacing:-.045em}
     .hero-description{font-size:.96rem;line-height:1.54}
@@ -212,6 +234,9 @@
       .hero-description{font-size:.79rem;line-height:1.4}
       .pain-lead h2,.section-heading h2,.proof-heading h2,.offer-title h2,.faq-heading h2,.bio-copy h2{font-size:clamp(1.66rem,7.1vw,1.96rem)}
       .closing h2{font-size:1.74rem}
+      #imperio{padding-block:46px}.imperio-pillars{grid-template-columns:1fr;gap:8px;margin-top:22px}.imperio-pillars article{padding:17px 16px}.imperio-pillars span{margin-bottom:7px}.imperio-pillars h3{font-size:1rem}.imperio-pillars p{font-size:.74rem}
+      .journey-section{padding-block:48px}.journey-grid{grid-template-columns:1fr 1fr;gap:8px;margin-top:22px}.journey-grid article{padding:15px 13px}.journey-grid span{margin-bottom:8px}.journey-grid h3{font-size:.92rem}.journey-grid p{font-size:.7rem}.journey-closing{margin-top:20px}.journey-closing p{font-size:.76rem}
+      .proof-section{padding-block:46px}.proof-list{margin:15px 0 18px}.proof-list li{display:block;font-size:.76rem}.proof-list span{display:block;margin-top:2px}
       .pain-card .round-icon{width:46px;height:46px;margin-bottom:10px;font-size:1.2rem}
       .proof-section{background-size:24px 24px,cover}
       .offer-section:before{left:-92px;top:80px;width:230px;height:240px;transform:none;background-position:left top;background-size:100% auto;opacity:.075;mask-image:linear-gradient(90deg,#000 0%,transparent 100%)}
@@ -263,21 +288,17 @@
 
     <section class="section section-light" id="imperio"><div class="wrap">
       <div class="section-heading"><p class="eyebrow">O que é o Império de Águias</p><h2>Um ano inteiro para você não precisar atravessar cada novo medo sozinha.</h2><p>O Império de Águias 2027 é uma jornada de 12 meses de desenvolvimento pessoal, mentalidade e pertencimento para terapeutas.</p></div>
-      <div class="pillar-grid">
-        <article class="pillar-card"><h3>Mentalidade e prosperidade</h3><p>Identifique padrões, crenças e comportamentos que interferem na forma como você cresce, cobra e recebe.</p></article>
-        <article class="pillar-card"><h3>Dinheiro e merecimento</h3><p>Desenvolva uma relação mais consciente com prosperidade e com aquilo que você acredita merecer viver.</p></article>
-        <article class="pillar-card"><h3>Identidade</h3><p>Fortaleça quem você é para não precisar copiar outras terapeutas para crescer.</p></article>
-        <article class="pillar-card"><h3>Corpo, mente e espírito</h3><p>Práticas voltadas ao cuidado e ao desenvolvimento integral.</p></article>
-        <article class="pillar-card"><h3>Relacionamentos, saúde e vida financeira</h3><p>Porque prosperidade não deveria existir apenas dentro do trabalho.</p></article>
-        <article class="pillar-card"><h3>Sonhos e objetivos</h3><p>Transforme desejos que vivem apenas na sua cabeça em metas que começam a orientar suas decisões.</p></article>
-        <article class="pillar-card"><h3>Pertencimento</h3><p>Caminhe ao lado de outras terapeutas que também decidiram ampliar o que acreditam ser possível para suas vidas.</p></article>
+      <div class="imperio-pillars">
+        <article><span>01</span><h3>Prosperidade com consciência</h3><p>Mentalidade, dinheiro e merecimento para transformar sua relação com crescer, cobrar e receber.</p></article>
+        <article><span>02</span><h3>Identidade que sustenta</h3><p>Corpo, mente, espírito e escolhas para fortalecer quem você é, sem copiar outros caminhos.</p></article>
+        <article><span>03</span><h3>Uma vida em expansão</h3><p>Relacionamentos, saúde, vida financeira, sonhos e pertencimento para orientar suas decisões.</p></article>
       </div>
     </div></section>
 
-    <section class="section journey-section" id="como-acontece"><div class="wrap"><div class="section-heading"><p class="eyebrow">Como essa jornada acontece</p><h2>Padrões construídos durante anos dificilmente mudam em uma única aula.</h2><p>Por isso, o Império foi pensado como uma jornada contínua.</p></div><div class="offer-layout"><div class="offer-title"><h2>Durante os 12 meses, você terá acesso a:</h2><p>Você não entra apenas para aprender alguma coisa. Você entra para passar 2027 em uma ambiência diferente daquela em que construiu os padrões que hoje deseja romper.</p></div><ul class="offer-includes"><li>Encontros mensais de desenvolvimento</li><li>Desafios ao longo do ano</li><li>Práticas para corpo, mente e espírito</li><li>Tratamentos energéticos integrados à proposta do Império</li></ul><div class="investment"><p>Trabalho sobre dinheiro, merecimento e prosperidade. Atividades relacionadas a relacionamentos, saúde e vida financeira. Uma comunidade de terapeutas para que você pare de viver cada dúvida, insegurança e nova decisão isoladamente.</p><a class="button" href="#relatos">QUERO VIVER ESSA JORNADA EM 2027 <span aria-hidden="true">→</span></a></div></div></div></section>
+    <section class="section journey-section" id="como-acontece"><div class="wrap"><div class="section-heading"><p class="eyebrow">Como essa jornada acontece</p><h2>Uma jornada contínua para transformar reflexão em movimento.</h2><p>Padrões construídos durante anos dificilmente mudam em uma única aula.</p></div><div class="journey-grid"><article><span>01</span><h3>Encontros mensais</h3><p>Desenvolvimento para diferentes dimensões da sua mentalidade e vida.</p></article><article><span>02</span><h3>Desafios e práticas</h3><p>Para corpo, mente e espírito, levando intenção para a rotina.</p></article><article><span>03</span><h3>Tratamentos energéticos</h3><p>Integrados à proposta do Império de Águias.</p></article><article><span>04</span><h3>Comunidade</h3><p>Para não atravessar cada dúvida, insegurança e decisão isoladamente.</p></article></div><div class="journey-closing"><p>Você entra para passar 2027 em uma ambiência diferente daquela em que construiu os padrões que hoje deseja romper.</p><a class="button" href="#relatos">QUERO VIVER ESSA JORNADA EM 2027 <span aria-hidden="true">→</span></a></div></div></section>
 
     <section class="proof-section" id="relatos"><div class="wrap proof-layout">
-      <div class="proof-heading"><p class="eyebrow">Provas reais</p><h2>Mulheres em momentos diferentes. Mudanças que começaram antes do resultado aparecer.</h2><p>Jaqueline encontrou uma nova forma de trabalhar. Viviana alcançou os primeiros R$10 mil. Camila saiu do zero a se reconhecer como terapeuta.</p><p>Resultados diferentes. Um ponto em comum: antes de ocupar um novo lugar profissionalmente, essas mulheres também precisaram mudar a maneira como enxergavam a si mesmas.</p><div class="proof-actions"><a class="button" href="#inscricao">QUERO COMEÇAR MINHA PRÓPRIA JORNADA <span aria-hidden="true">→</span></a></div></div>
+      <div class="proof-heading"><p class="eyebrow">Provas reais</p><h2>Mudanças que começam antes do resultado aparecer.</h2><p>Histórias de terapeutas em momentos diferentes da jornada.</p><ul class="proof-list"><li><strong>Jaqueline</strong><span>Uma nova forma de trabalhar.</span></li><li><strong>Viviana</strong><span>Os primeiros R$10 mil.</span></li><li><strong>Camila</strong><span>Do zero a se reconhecer como terapeuta.</span></li></ul><div class="proof-actions"><a class="button" href="#inscricao">QUERO COMEÇAR MINHA PRÓPRIA JORNADA <span aria-hidden="true">→</span></a></div></div>
       <div><div class="testimonial-window" aria-label="Relatos enviados pelas participantes"><div class="testimonial-track">
         <a class="testimonial-card" href="https://drive.google.com/file/d/1X38W1w2XgzeAyK9Enqvhlq9E4dLHp6mj/view" target="_blank" rel="noopener"><img src="./assets/relato-7114.png" alt="Relato de participante do Império de Águias" loading="lazy"></a>
         <a class="testimonial-card" href="https://drive.google.com/file/d/1racLmSRveUXHIdG8BBgczybGXWKuISqo/view" target="_blank" rel="noopener"><img src="./assets/relato-7115.png" alt="Relato de participante do Império de Águias" loading="lazy"></a>
